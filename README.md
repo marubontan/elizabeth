@@ -1,13 +1,13 @@
 # elizabeth
 ## Overview
-This is machine learning pipeline library.  
+This is a machine learning pipeline library.  
 About pre-processing, modeling and evaluation, this library supplies pipeline. By filling in the pipeline's demand such 
 as data file path, load function, pre-processing function, training function and so on, you can compose executable pipeline.
 
 ## Concept
 The main point and philosophy of this library is to restrict the freedom of developer for the clear view of machine leaning flow.  
 When there are different demands between modeling and evaluation or some people need to work on the same machine leaning task, 
-it can become very difficult to messy to keep the machine leaning flow clear and concise. This library assigns some restrictions 
+it can become very difficult to keep the machine leaning flow clear and concise. This library assigns some restrictions 
 to compose the pipeline such that all the time the data or model should be loaded by explicitly given path.  
 Also, you can explicitly keep and pass all the setting such as used function, data path to avoid confusion.  
 
