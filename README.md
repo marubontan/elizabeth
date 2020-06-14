@@ -11,6 +11,11 @@ it can become very difficult to keep the machine leaning flow clear and concise.
 to compose the pipeline such that all the time the data or model should be loaded by explicitly given path.  
 Also, you can explicitly keep and pass all the setting such as used function, data path to avoid confusion.  
 
+## Install
+```
+pip install elizabeth
+```
+
 ## Usage
 You can do three things, Modeling pipe, evaluation pipe and they both at once. The main usage is consistent. You fill in 
 the demand the data class asks. And you can give the instance of it to the executor function.  
