@@ -108,6 +108,6 @@ from elizabeth.data_class import PipelineInfo
 from elizabeth.executor import execute_pipeline
 
 pipe_info = PipelineInfo(model_pipeline_info=mpi, evaluation_pipeline_info=epi)
-pipeline_outptu = execute_pipeline(pipe_info)
+pipeline_output = execute_pipeline(pipe_info)
 ```
 
