@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="elizabeth",
-    version="0.0.1",
+    version="0.0.2",
     author="Shuhei Kishi",
     author_email="marubontan@gmail.com",
     description=("Machine leaning pipeline"),
