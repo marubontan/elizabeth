@@ -1,9 +1,22 @@
-from .data_class import (ModelPipelineOutput,
+from .data_class import (ProcessPipelineInfo,
+                         ProcessPipelineOutput,
+                         ModelPipelineOutput,
                          ModelPipelineInfo,
                          EvaluationPipelineOutput,
                          EvaluationPipelineInfo,
                          PipelineOutput,
                          PipelineInfo)
+
+
+def execute_process_pipeline(ppi: ProcessPipelineInfo) -> ProcessPipelineOutput:
+    ppo = ProcessPipelineOutput()
+    data = ppi.read_data(ppi.data_path)
+    if ppi.keep_data:
+        ppo.data = data
+    processed_data = ppi.process(data)
+    if ppi.keep_processed_data:
+        ppo.processed_data = processed_data
+    return ppo
 
 
 def execute_model_pipeline(mpi: ModelPipelineInfo) -> ModelPipelineOutput:
