@@ -3,6 +3,12 @@ from dataclasses import dataclass
 
 
 @dataclass
+class ProcessPipelineOutput:
+    data: Optional[Any] = None
+    processed_data: Optional[Any] = None
+
+
+@dataclass
 class ModelPipelineOutput:
     data: Optional[Any] = None
     processed_data: Optional[Any] = None
@@ -20,6 +26,15 @@ class EvaluationPipelineOutput:
 class PipelineOutput:
     model_pipeline_output: Optional[ModelPipelineOutput] = None
     evaluation_pipeline_output: Optional[EvaluationPipelineOutput] = None
+
+
+@dataclass
+class ProcessPipelineInfo:
+    data_path: str
+    read_data: Callable
+    process: Callable
+    keep_data: bool = True
+    keep_processed_data: bool = True
 
 
 @dataclass
